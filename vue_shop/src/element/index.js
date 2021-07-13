@@ -1,6 +1,6 @@
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
-import { Button, Form, FormItem, Input, Icon } from 'element-ui'
+import { Button, Form, FormItem, Input, Icon, Message } from 'element-ui'
 
 const element = {
   install: function (Vue) {
@@ -9,6 +9,7 @@ const element = {
     Vue.use(FormItem)
     Vue.use(Input)
     Vue.use(Icon)
+    Vue.prototype.$message = Message
   }
 }
 
