@@ -3,7 +3,7 @@
 // module.exports = {
 //   outputDir: __dirname + '/dist',
 //   configureWebpack: {
-//     entry: './src/main.js',
+//     entry: './src/main.js ',
 //     module: {
 //       rules: [
 //         {

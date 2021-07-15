@@ -7,6 +7,8 @@ export function request (config) {
   })
 
   instance.interceptors.request.use(config => {
+    // 将token挂载到请求头中的Authorization字段
+    config.headers.Authorization = window.sessionStorage.getItem('token')
     return config
   }, error => {
     return error

@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 配置懒加载
-const Login = () => import('@/views/login/Login')
-const Home = () => import('@/views/home/home')
+const Login = () => import('@/views/Login')
+const Home = () => import('@/views/Home')
+const Welcome = () => import('@/views/Welcome')
+const Users = () => import('@/views/users/Users')
+const Roles = () => import('@/views/roles/Roles')
 
 Vue.use(VueRouter)
 
@@ -17,7 +20,22 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        component: Users
+      },
+      {
+        path: '/roles',
+        component: Roles
+      }
+    ]
   }
 ]
 

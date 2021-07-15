@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { login } from '../../network/loginApi'
+import { login } from '../network/loginApi'
 
 export default {
   name: 'Login',
